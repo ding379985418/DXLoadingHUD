@@ -19,11 +19,13 @@
     [super viewDidLoad];
  
 //    [DXLoadingHUD showHUDWithType:DXLoadingHUDType_circle];
-    [DXLoadingHUD showHUDWithType:DXLoadingHUDType_line];
+//    [DXLoadingHUD showHUDWithType:DXLoadingHUDType_line];
+    [DXLoadingHUD showHUDToView:self.view type:DXLoadingHUDType_circle];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
-    [DXLoadingHUD dismissHUD];
+//    [DXLoadingHUD dismissHUD];
+    [DXLoadingHUD dismissHUDFromView:self.view];
 }
 @end
